@@ -56,9 +56,9 @@ def start_web_server():
             hosts = list(set(addresses))  # Make list unique
         else:
             hosts = [host]
-        serving_msg = "http://{0}:{1}/lendingbot.html".format(hosts[0], port)
+        serving_msg = "http://{0}:{1}/index.html".format(hosts[0], port)
         for host in hosts[1:]:
-            serving_msg += ", http://{0}:{1}/lendingbot.html".format(host, port)
+            serving_msg += ", http://{0}:{1}/index.html".format(host, port)
         print 'Started WebServer, lendingbot status available at {0}'.format(serving_msg)
         server.serve_forever()
     except Exception as ex:
